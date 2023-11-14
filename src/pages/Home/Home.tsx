@@ -66,7 +66,7 @@ const Home = () => {
       </Flexbox>
       {/* アプリバージョン情報 */}
       <Version>
-        <Typography>Version {process.env.REACT_APP_VERSION}</Typography>
+        <Typography>Version 0.1.0</Typography>
       </Version>
     </Flexbox>
   );
