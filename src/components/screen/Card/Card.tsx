@@ -7,7 +7,7 @@ import SilverBagIcon from "../../../assets/icon/silver/bag.svg";
 import SilverBoxIcon from "../../../assets/icon/silver/box.svg";
 import SilverGramIcon from "../../../assets/icon/silver/gram.svg";
 import { COLOR } from "../../../constants/color";
-import { Flexbox, Image, Typography } from "../../common";
+import { Box, Flexbox, Image, Typography } from "../../common";
 import { Section } from "../Section";
 import { Tag } from "../Tag";
 import styles from "./Card.module.scss";
@@ -66,7 +66,10 @@ const Card = (props: CardProps) => {
         </Flexbox>
         {/* A品 */}
         {/* タグ */}
-        <Tag tagName="A品" bgColor={COLOR.GOLD1} color={COLOR.W1} />
+        <Box className={styles.tag_box}>
+          <Tag tagName="A品" bgColor={COLOR.GOLD1} color={COLOR.W1} />
+          <Box className={styles.shimmer}></Box>
+        </Box>
         {/* 袋 */}
         <Section
           className="a_bag"
@@ -99,12 +102,10 @@ const Card = (props: CardProps) => {
         />
         {/* B品 */}
         {/* タグ */}
-        <Tag
-          tagName="B品"
-          bgColor={COLOR.SILVER1}
-          color={COLOR.W1}
-          marginTop={16}
-        />
+        <Box className={styles.tag_box}>
+          <Tag tagName="B品" bgColor={COLOR.SILVER1} color={COLOR.W1} />
+          <Box className={styles.shimmer}></Box>
+        </Box>
         {/* 袋 */}
         <Section
           className="b_bag"

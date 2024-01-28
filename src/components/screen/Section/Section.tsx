@@ -1,6 +1,6 @@
 import { COLOR } from "../../../constants/color";
 import { Flexbox, Image, Typography } from "../../common";
-import { Tag } from "../Tag";
+import { Sticker } from "../Sticker";
 import styles from "./Section.module.scss";
 import { SectionProps } from "./Section.types";
 
@@ -42,14 +42,7 @@ const Section = (props: SectionProps) => {
           </Typography>
         </Flexbox>
         {/* stockが「0」のとき、つまり完売したときに「完売タグ」を表示する */}
-        {stock === 0 && (
-          <Tag
-            tagName="完売"
-            bgColor={COLOR.RED2}
-            color={COLOR.W1}
-            border="1px solid #e00410"
-          />
-        )}
+        {stock === 0 && <Sticker />}
       </Flexbox>
       {/* セクション中身 */}
       <Flexbox
